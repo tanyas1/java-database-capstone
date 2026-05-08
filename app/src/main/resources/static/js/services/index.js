@@ -20,11 +20,11 @@ function openLoginModal(role) {
       <button class="dashboard-btn" onclick="openPatientLogin()">Login</button>
       <button class="dashboard-btn" onclick="openPatientSignup()">Sign Up</button>`;
   }
-  document.getElementById('modal-overlay').style.display = 'flex';
+  document.getElementById('modal').style.display = 'block';
 }
 
 function closeModal() {
-  document.getElementById('modal-overlay').style.display = 'none';
+  document.getElementById('modal').style.display = 'none';
 }
 
 function openPatientLogin() {
