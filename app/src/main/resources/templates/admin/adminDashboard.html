@@ -45,3 +45,48 @@
         <select id="timeFilter">
           <option value="">All Times</option>
           <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+
+        <select id="specialtyFilter">
+          <option value="">All Specialties</option>
+          <option value="cardiologist">Cardiologist</option>
+          <option value="dermatologist">Dermatologist</option>
+          <option value="neurologist">Neurologist</option>
+          <option value="pediatrician">Pediatrician</option>
+          <option value="orthopedic">Orthopedic</option>
+          <option value="gynecologist">Gynecologist</option>
+          <option value="psychiatrist">Psychiatrist</option>
+          <option value="dentist">Dentist</option>
+          <option value="ophthalmologist">Ophthalmologist</option>
+          <option value="ent">ENT Specialist</option>
+          <option value="urologist">Urologist</option>
+          <option value="oncologist">Oncologist</option>
+          <option value="gastroenterologist">Gastroenterologist</option>
+          <option value="general">General Physician</option>
+        </select>
+
+        <!-- 16. Doctor Cards Grid -->
+        <div id="content"></div>
+
+      </main>
+
+      <!-- 17. Footer Placeholder -->
+      <div id="footer"></div>
+
+    </div><!-- end .wrapper -->
+  </div><!-- end .container -->
+
+  <!-- 18. Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 19. Page-Specific Logic -->
+  <script type="module" th:src="@{/js/adminDashboard.js}"></script>
+
+</body>
+</html>

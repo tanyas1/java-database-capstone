@@ -1,14 +1,11 @@
 // adminDashboard.js
 
-import { openModal, closeModal } from './render.js';
+import { openModal, closeModal } from './components/modals.js';
 import { getDoctors, filterDoctors, saveDoctor } from './services/doctorServices.js';
-import { createDoctorCard } from './doctorCard.js';
+import { createDoctorCard } from './components/doctorCard.js';
 
-// Attach click listener to "Add Doctor" button
-const addDocBtn = document.getElementById("addDocBtn");
-if (addDocBtn) {
-  addDocBtn.addEventListener("click", () => openModal('addDoctor'));
-}
+// Expose openModal globally so header.js onclick="openModal('addDoctor')" works
+window.openModal = openModal;
 
 
 // When DOM is fully loaded, fetch and display all doctors
@@ -79,14 +76,14 @@ function renderDoctorCards(doctors) {
 // Add a new doctor from modal form data
 window.adminAddDoctor = async function () {
 
-  // Collect form values
-  const name        = document.getElementById("doctorName").value.trim();
-  const email       = document.getElementById("doctorEmail").value.trim();
-  const phone       = document.getElementById("doctorPhone").value.trim();
-  const password    = document.getElementById("doctorPassword").value.trim();
-  const specialty   = document.getElementById("doctorSpecialty").value.trim();
-  const timesInput  = document.getElementById("doctorTimes").value.trim();
-  const availableTimes = timesInput.split(",").map(t => t.trim()).filter(t => t);
+  // Collect form values — IDs match what modals.js renders
+  const name      = document.getElementById("doctorName").value.trim();
+  const email     = document.getElementById("doctorEmail").value.trim();
+  const phone     = document.getElementById("doctorPhone").value.trim();
+  const password  = document.getElementById("doctorPassword").value.trim();
+  const specialty = document.getElementById("specialization").value.trim();
+  const checkedBoxes   = document.querySelectorAll('input[name="availability"]:checked');
+  const availableTimes = Array.from(checkedBoxes).map(cb => cb.value);
 
   // Get auth token
   const token = localStorage.getItem("token");

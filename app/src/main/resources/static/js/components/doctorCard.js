@@ -1,9 +1,9 @@
 // doctorCard.js
 
 // Imports
-import { showBookingOverlay } from './loggedPatient.js';
-import { deleteDoctor } from './services/doctorServices.js';
-import { getPatientByToken } from './services/patientServices.js';
+import { showBookingOverlay } from '../loggedPatient.js';
+import { deleteDoctor } from '../services/doctorServices.js';
+import { getPatientData } from '../services/patientServices.js';
 
 // Function to create and return a DOM element for a single doctor card
 function createDoctorCard(doctor) {
@@ -121,7 +121,7 @@ function createDoctorCard(doctor) {
       }
 
       // Fetch patient data with token
-      const patient = await getPatientByToken(token);
+      const patient = await getPatientData(token);
 
       // Show booking overlay UI with doctor and patient info
       showBookingOverlay(doctor, patient);
