@@ -1,0 +1,47 @@
+<!-- adminDashboard.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <!-- 4. Character Encoding -->
+  <meta charset="UTF-8">
+
+  <!-- 5. Favicon -->
+  <link rel="icon" type="image/png" th:href="@{/assets/images/logo/logo.png}" />
+
+  <!-- 6. Page Title -->
+  <title>Admin Dashboard</title>
+
+  <!-- 7. CSS Stylesheets -->
+  <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+  <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+  <!-- 8. JavaScript Files -->
+  <script th:src="@{/js/render.js}" defer></script>
+  <script th:src="@{/js/util.js}" defer></script>
+  <script th:src="@{/js/components/header.js}" defer></script>
+  <script th:src="@{/js/components/footer.js}" defer></script>
+</head>
+
+<!-- 9. Body with onload -->
+<body onload="renderContent()">
+
+  <!-- 10. Container -->
+  <div class="container">
+
+    <!-- 11. Wrapper -->
+    <div class="wrapper">
+
+      <!-- 12. Header Placeholder -->
+      <div id="header"></div>
+
+      <!-- 13. Main Section -->
+      <main class="main-content">
+
+        <!-- 14. Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search doctors..." />
+
+        <!-- 15. Filter Dropdowns -->
+        <select id="timeFilter">
+          <option value="">All Times</option>
+          <option value="AM">AM</option>

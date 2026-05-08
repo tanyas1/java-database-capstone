@@ -1,0 +1,80 @@
+<!-- doctorDashboard.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <!-- 5. Character Encoding -->
+  <meta charset="UTF-8">
+
+  <!-- 6. Favicon -->
+  <link rel="icon" type="image/png" th:href="@{/assets/images/logo/logo.png}" />
+
+  <!-- 7. Page Title -->
+  <title>Doctor Dashboard</title>
+
+  <!-- 8. CSS Stylesheets -->
+  <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
+  <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}">
+  <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+  <!-- 9. JavaScript Files -->
+  <script th:src="@{/js/render.js}" defer></script>
+  <script th:src="@{/js/util.js}" defer></script>
+  <script th:src="@{/js/components/header.js}" defer></script>
+  <script th:src="@{/js/components/footer.js}" defer></script>
+  <script type="module" th:src="@{/js/doctorDashboard.js}" defer></script>
+</head>
+
+<!-- 10. Body -->
+<body onload="renderContent()">
+
+  <!-- 11. Main Container -->
+  <div class="container">
+
+    <!-- 12. Wrapper -->
+    <div class="wrapper">
+
+      <!-- 13. Header Placeholder -->
+      <div id="header"></div>
+
+      <!-- 14. Main Content Area -->
+      <div class="main-content">
+
+        <!-- 15. Search Bar -->
+        <input
+          type="text"
+          id="searchBar"
+          class="searchBar"
+          placeholder="Search Bar for custom output"
+        />
+
+        <!-- 16. Filter Controls -->
+        <div class="filter-controls">
+          <button id="todayButton">Today</button>
+          <input type="date" id="datePicker" />
+        </div>
+
+        <!-- 17. Patient Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Name</th>
+              <th>Phone No.</th>
+              <th>Email</th>
+              <th>Prescription</th>
+            </tr>
+          </thead>
+          <tbody id="patientTableBody"></tbody>
+        </table>
+
+      </div><!-- end .main-content -->
+
+      <!-- 18. Footer Placeholder -->
+      <div id="footer"></div>
+
+    </div><!-- end .wrapper -->
+  </div><!-- end .container -->
+
+</body>
+</html>

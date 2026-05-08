@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 5. Character Encoding -->
+  <meta charset="UTF-8">
+
+  <!-- 6. Page Title -->
+  <title>Select Role</title>
+
+  <!-- 7. Favicon -->
+  <link rel="icon" href="../assets/images/logo/Logo.png">
+
+  <!-- 8. Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- 9. JavaScript files -->
+  <script src="../js/util.js" defer></script>
+  <script src="../js/render.js" defer></script>
+  <script src="../js/components/header.js" defer></script>
+  <script src="../js/components/footer.js" defer></script>
+</head>
+
+<body>
+
+  <!-- 11. Main Container -->
+  <div class="container">
+
+    <!-- 12. Wrapper -->
+    <div class="wrapper">
+
+      <!-- 13. Header Placeholder -->
+      <div id="header"></div>
+
+      <!-- 14. Main Section -->
+      <main>
+
+        <!-- 15. Role Selection Heading -->
+        <h1>Select Your Role</h1>
+
+        <!-- 16. Role Buttons -->
+        <div class="role-buttons">
+          <button id="adminBtn" onclick="openLoginModal('admin')">Admin</button>
+          <button id="patientBtn" onclick="openLoginModal('patient')">Patient</button>
+          <button id="doctorBtn" onclick="openLoginModal('doctor')">Doctor</button>
+        </div>
+
+      </main>
+
+      <!-- 17. Footer Placeholder -->
+      <div id="footer"></div>
+
+    </div><!-- end .wrapper -->
+  </div><!-- end .container -->
+
+  <!-- 18. Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- 19. Page-Specific Logic -->
+  <script type="module" src="../js/index.js"></script>
+
+</body>
+</html>
