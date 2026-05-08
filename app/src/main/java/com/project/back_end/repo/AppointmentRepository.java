@@ -15,7 +15,7 @@ import java.util.List;
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
 
     // Find appointments for a doctor within a time range (eagerly fetch available times)
-    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.doctor.availableTimes " +
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.doctor d LEFT JOIN FETCH d.availableTimes " +
            "WHERE a.doctor.id = :doctorId " +
            "AND a.appointmentTime BETWEEN :start AND :end")
     List<Appointment> findByDoctorIdAndAppointmentTimeBetween(
