@@ -5,12 +5,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ccc;
+    padding: 15px 20px;
+    border-bottom: 2px solid #e0e0e0;
     flex-wrap: wrap;
-    min-height: 60px;
+    min-height: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
   
   /* Logo section with image + title */
@@ -30,9 +31,10 @@
   
   /* Logo text / slogan */
   .logo-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    color: #333;
+    color: #1B8A8D;
+    letter-spacing: 0.5px;
   }
   
   /* Nav links styling */
@@ -45,7 +47,8 @@
   }
   
   nav a:hover {
-    color: #003e3e;
+    color: #1B8A8D;
+    transition: color 0.2s ease;
   }
   
 
@@ -83,10 +86,10 @@
 /* Footer Section */
 .footer {
     background-color: #f4f4f4;
-    color: #fff;
+    color: #333;
     padding: 40px 20px;
-    border-top: 2px solid #f4f4f4;
-    
+    border-top: 1px solid #ddd;
+
   }
   
   .footer-container {
@@ -275,7 +278,7 @@
   }
   
   .doctor-info p {
-    margin: 20px 0px;
+    margin: 20px 0;
     font-size: 14px;
     color: #555;
   }

@@ -30,22 +30,57 @@ h2 {
 }
 
 /* Main Section */
-.main-content {
+main {
   flex-grow: 1;
-  padding: 40px;
+  padding: 60px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-image: url('../images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #e8f5f5 0%, #d4eded 100%);
+  min-height: 500px;
 }
 
-/* Buttons */
+/* Main Heading */
+h1 {
+  font-size: 48px;
+  color: #003e3e;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-family: 'Alegreya', 'Roboto', sans-serif;
+}
+
+/* Role Buttons Container */
+.role-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Role Selection Buttons */
+#adminBtn, #patientBtn, #doctorBtn {
+  background-color: #1B8A8D;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  width: 180px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#adminBtn:hover, #patientBtn:hover, #doctorBtn:hover {
+  background-color: #156466;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* General Buttons */
 button {
   background-color: #015c5d;
   color: white;
