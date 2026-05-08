@@ -46,7 +46,22 @@ public class Service {
     }
 
 
-    // 3. Validate Token
+    // 3. Extract Email from Token
+    public String extractEmailFromToken(String token) {
+        return tokenService.extractEmail(token);
+    }
+
+    // 3a. Get Doctor by Email
+    public Doctor getDoctorByEmail(String email) {
+        return doctorRepository.findByEmail(email);
+    }
+
+    // 3b. Get Patient by Email
+    public Patient getPatientByEmail(String email) {
+        return patientRepository.findByEmail(email);
+    }
+
+    // 4. Validate Token
     public int validateToken(String token, String role) {
         try {
             boolean valid = tokenService.validateToken(token, role);
